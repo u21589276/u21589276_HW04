@@ -1,10 +1,13 @@
 ﻿@{
     ViewData["Title"] = "Register";
 }
+<head>
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
 
-<h1 class="display-4">@ViewData["Title"]</h1>
+<h1 class="display-4 golden">@ViewData["Title"]</h1>
 
-<p>Fill in form to register as on of our "Giving Givers"</p>
+<p>Fill in form to register as on of our <b class="golden">"Giving Givers"</b></p>
 <br />
 <!--Select user type-->
 <h4>User Definition</h4>
@@ -14,7 +17,7 @@
     <select class="form-control" name="userType" id="userTypeInput">
         <option>Select user type</option>
         <option>Individual</option>
-        <option>Organisation/ Company</option>
+        <option>Organisation/Company</option>
     </select>
 </div>
 <br />
@@ -62,7 +65,7 @@
             </div>
 
             <button class="btn btn-primary">Register</button>
-            <button class="btn btn-danger">Clear</button>
+            <button type="reset" class="btn btn-danger">Clear</button>
         </div>
     </div>
 </form>
@@ -72,7 +75,7 @@
     <div class="row">
         <div class="col-sm-6">
 
-            <h4>Personal Details</h4>
+            <h4>Company/Organisation Details</h4>
             <div class="form-group">
                 <label for="nameInput">Company/Organisation name</label>
                 <input type="text" class="form-control" name="Companyame" id="nameInput" placeholder="Company/Organisation name...">
@@ -111,7 +114,10 @@
             </div>
 
             <button class="btn btn-primary">Register</button>
-            <button class="btn btn-danger">Clear</button>
+            <button type="reset" class="btn btn-danger">Clear</button>
         </div>
     </div>
 </form>
+
+<!--js scripts-->
+<script src="~/js/Registration.js"></script>

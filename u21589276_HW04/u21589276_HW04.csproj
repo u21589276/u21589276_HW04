@@ -12,4 +12,20 @@
     <Folder Include="Views\User\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Content Update="wwwroot\js\Registration.js">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Registration.cs</LastGenOutput>
+    </Content>
+    <Content Update="wwwroot\js\Registration.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Registration.js</DependentUpon>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Service Include="{508349b6-6b84-4df5-91f0-309beebad82d}" />
+  </ItemGroup>
+
 </Project>
