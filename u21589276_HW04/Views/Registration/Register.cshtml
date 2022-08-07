@@ -1,5 +1,117 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
+﻿@{
+    ViewData["Title"] = "Register";
 }
+
+<h1 class="display-4">@ViewData["Title"]</h1>
+
+<p>Fill in form to register as on of our "Giving Givers"</p>
+<br />
+<!--Select user type-->
+<h4>User Definition</h4>
+<p>Below, please select the type of user you would like to register as.</p>
+<div class="form-group">
+    <label for="userTypeInput">Select user type</label>
+    <select class="form-control" name="userType" id="userTypeInput">
+        <option>Select user type</option>
+        <option>Individual</option>
+        <option>Organisation/ Company</option>
+    </select>
+</div>
+<br />
+
+<!--Individual user type frm-->
+<form name="IndividualUserfrm" id="indiUserfrm" hidden>
+    <div class="row">
+        <div class="col-sm-6">
+
+            <h4>Personal Details</h4>
+            <div class="form-group">
+                <label for="nameInput">Name</label>
+                <input type="text" class="form-control" name="Name" id="nameInput" placeholder="Name...">
+            </div>
+            <div class="form-group">
+                <label for="surnameInput">Surname</label>
+                <input type="text" class="form-control" name="Surname" id="surnameInput" placeholder="Surname...">
+            </div>
+            <div class="form-group">
+                <label for="emailInput">Email</label>
+                <input type="email" class="form-control" name="Email" id="emailInput" placeholder="Email...">
+            </div>
+            <div class="form-group">
+                <label for="phoneInput">Phone number</label>
+                <input type="text" class="form-control" name="Phone number" id="phoneInput" placeholder="Phone number...">
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <h4>Address</h4>
+            <div class="form-group">
+                <label for="addressL1Input">Address</label>
+                <input type="text" class="form-control" name="Address" id="addressL1Input" placeholder="Address...">
+            </div>
+            <div class="form-group">
+                <label for="cityInput">City</label>
+                <input type="text" class="form-control" name="City" id="cityInput" placeholder="City...">
+            </div>
+            <div class="form-group">
+                <label for="provinceInput">Province</label>
+                <input type="text" class="form-control" name="Province" id="provinceInput" placeholder="Province...">
+            </div>
+            <div class="form-group">
+                <label for="codeInput">Zip Code</label>
+                <input type="text" class="form-control" name="Code" id="codeInput" placeholder="Zipcde...">
+            </div>
+
+            <button class="btn btn-primary">Register</button>
+            <button class="btn btn-danger">Clear</button>
+        </div>
+    </div>
+</form>
+
+<!--organization/company user type frm-->
+<form name="OrganisationUserfrm" id="orgUserfrm">
+    <div class="row">
+        <div class="col-sm-6">
+
+            <h4>Personal Details</h4>
+            <div class="form-group">
+                <label for="nameInput">Company/Organisation name</label>
+                <input type="text" class="form-control" name="Companyame" id="nameInput" placeholder="Company/Organisation name...">
+            </div>
+            <div class="form-group">
+                <label for="fileInput"><b>Proof of organisation/company</b></label>
+                <p>please upload any type of proof for organisation or registration certificate in .pdf format only!</p>
+                <input type="file" name="ProofFile" id="fileInput" placeholder="Uplad proof...">
+            </div>
+            <div class="form-group">
+                <label for="emailInput">Email</label>
+                <input type="email" class="form-control" name="Email" id="emailInput" placeholder="Email...">
+            </div>
+            <div class="form-group">
+                <label for="phoneInput">Phone number</label>
+                <input type="text" class="form-control" name="Phone number" id="phoneInput" placeholder="Phone number...">
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <h4>Address</h4>
+            <div class="form-group">
+                <label for="addressL1Input">Address</label>
+                <input type="text" class="form-control" name="Address" id="addressL1Input" placeholder="Address...">
+            </div>
+            <div class="form-group">
+                <label for="cityInput">City</label>
+                <input type="text" class="form-control" name="City" id="cityInput" placeholder="City...">
+            </div>
+            <div class="form-group">
+                <label for="provinceInput">Province</label>
+                <input type="text" class="form-control" name="Province" id="provinceInput" placeholder="Province...">
+            </div>
+            <div class="form-group">
+                <label for="codeInput">Zip Code</label>
+                <input type="text" class="form-control" name="Code" id="codeInput" placeholder="Zipcde...">
+            </div>
+
+            <button class="btn btn-primary">Register</button>
+            <button class="btn btn-danger">Clear</button>
+        </div>
+    </div>
+</form>

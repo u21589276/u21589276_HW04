@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace u21589276_HW04.Controllers
 {
-    public class User : Controller
+    public class Registration : Controller
     {
-        public IActionResult Index()
+        public IActionResult Register()
         {
             return View();
         }
