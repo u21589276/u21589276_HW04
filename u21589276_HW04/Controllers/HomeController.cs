@@ -23,7 +23,7 @@ namespace u21589276_HW04.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult About()
         {
             return View();
         }
