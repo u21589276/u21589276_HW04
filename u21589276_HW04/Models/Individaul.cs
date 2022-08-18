@@ -5,7 +5,9 @@ using System.Threading.Tasks;
 
 namespace u21589276_HW04.Models
 {
-    public class Individaul
+    public class Individaul : Donor
     {
+        public string Name { get; set; }
+        public string Surname { get; set; }
     }
 }

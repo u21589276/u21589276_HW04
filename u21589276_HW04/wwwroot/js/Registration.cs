@@ -26,3 +26,7 @@ function checkUserType() {
         OrganisationUserfrm.style.display = "none";
 	}
 }
+
+function displayDonorfrm() {
+    document.getElementById("frmDonor").style.display = "block";
+}

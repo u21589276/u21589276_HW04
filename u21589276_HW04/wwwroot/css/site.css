@@ -1,6 +1,5 @@
 ﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
-
 a.navbar-brand {
   white-space: normal;
   text-align: center;
@@ -64,7 +63,7 @@ body {
   background-color: black;
 }
 h4{
-    color: goldenrod;
+    color: #ffa800;
 }
 
 .footer {
@@ -76,6 +75,11 @@ h4{
 }
 
 /* Hide/unhide registration type frm */
+
+/*hide donating frm*/
+#frmDonor {
+    display: none;
+}
 
 #indiUserfrm {
     display: none;

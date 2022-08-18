@@ -3,4 +3,66 @@
 }
 
 <h1 class="display-4 golden">@ViewData["Title"]</h1>
+<p>Items listed below are accepted by our foundation and partners</p>
+<hr color="#ffa800" />
 
+<br />
+<div class="row">
+    <div class="col-sm-5">
+        <h4>Food Items</h4>
+        <table class="table bg-warning">
+            <tr>
+                <th>ITEM NAME</th>
+                <th>CATEGORY</th>
+            </tr>
+        </table>
+    </div>
+
+    <div class="col-sm-2"></div>
+
+    <div class="col-sm-5">
+        <h4>Clothing Items</h4>
+        <table class="table bg-warning">
+            <tr>
+                <th>ITEM NAME</th>
+                <th>CATEGORY</th>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<br />
+<hr color="#ffa800" />
+<button class="btn btn-success" onclick="displayDonorfrm()">Donate Now</button>
+
+<br />
+<br />
+<!--Donation frm-->
+<form name="donatefrm" id="frmDonor">
+    <p>Please fill in the following details to create a donation to us.</p>
+    <div class="form-group">
+        <label for="nameInputdnr">Name</label>
+        <input type="text" class="form-control" name="Name" id="nameInputdnr" placeholder="Name...">
+    </div>
+    <div class="form-group">
+        <label for="phoneInputdnr">Phone Number</label>
+        <input type="text" class="form-control" name="Phone" id="PhoneInputdnr" placeholder="Phonenumber...">
+    </div>
+    <div class="form-group">
+        <label for="CategoryInputdnr">Select Category</label>
+        <select class="form-control" name="Category" id="CategoryInput">
+            <option>Select Category</option>
+            <option>Food</option>
+            <option>Clothing</option>
+        </select>
+    </div>
+    <div class="form-group">
+        <label for="itemInputdnr">Item Description</label>
+        <input type="text" class="form-control" name="Item" id="itemInputdnr" placeholder="Describe Item...">
+    </div>
+    <button class="btn btn-primary">Create Donation</button>
+    <button class="btn btn-danger">Cancel</button>
+</form>
+
+<!--js scripts-->
+<script src="~/js/Registration.js"></script>
