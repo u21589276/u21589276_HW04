@@ -13,6 +13,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="wwwroot\Media\logo.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Content Update="wwwroot\js\Registration.js">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>Registration.cs</LastGenOutput>
