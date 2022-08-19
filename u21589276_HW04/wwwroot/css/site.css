@@ -103,3 +103,12 @@ h4{
     background-color: white;
     padding: 10px;
 }
+
+/*Hide selct item frm-control*/
+#FoodCat{
+    display: none;
+}
+
+#clothingCat{
+    display: none;
+}

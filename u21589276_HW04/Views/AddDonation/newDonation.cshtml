@@ -75,6 +75,17 @@
 
 <br />
 <hr color="#ffa800" />
+<h5>Note:</h5>
+<p>
+    Please bear in mind that when you are making a donation, we can only accept only one category type per donation request submitted. We apologise
+    if this has caused any inconveniences, but our team has made a decision to accept donations in this process manner, as a way to enable a better management 
+    flow of items donated to us. In this way we are also able to collect items from donors and store them faster and easier into their different categories. Thank you for
+    understanding.
+    <br /><br />
+    The Giving Legend.
+</p>
+
+<br />
 <button class="btn btn-success" onclick="displayDonorfrm()">Donate Now</button>
 
 <br />
@@ -98,6 +109,35 @@
             <option>Clothing</option>
         </select>
     </div>
+
+    <!--select food items-->
+    <div class="form-group" id="FoodCat">
+        <label for="CategoryFInputdnr">Select Food item to donate</label>
+        <select class="form-control" name="Food" id="CategoryFInput">
+            @foreach (var item in Model)
+            {
+                @if (item.GetType() == typeof(FoodItm))
+                {
+                    <option>@item.Name</option>
+                }
+            }
+        </select>
+    </div>
+
+    <!--select clothing items-->
+    <div class="form-group" id="clothingCat">
+        <label for="CategoryCInputdnr">Select Clothing item to donate</label>
+        <select class="form-control" name="Clothing" id="CategoryCInput">
+            @foreach (var item in Model)
+            {
+                @if (item.GetType() == typeof(ClothingItm))
+                {
+                    <option>@item.Name</option>
+                }
+            }
+        </select>
+    </div>
+
     <div class="form-group">
         <label for="itemInputdnr">Item Description</label>
         <input type="text" class="form-control" name="Item" id="itemInputdnr" placeholder="Describe Item...">
