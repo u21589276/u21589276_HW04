@@ -12,7 +12,7 @@ namespace u21589276_HW04.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-
+    
         public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
@@ -24,6 +24,10 @@ namespace u21589276_HW04.Controllers
         }
 
         public IActionResult About()
+        {
+            return View();
+        }
+        public IActionResult Partners()
         {
             return View();
         }

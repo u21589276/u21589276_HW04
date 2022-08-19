@@ -6,6 +6,8 @@
     <title>@ViewData["Title"] - u21589276_HW04</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/brands.min.css">
 </head>
 <body>
     <header>
@@ -19,16 +21,19 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-light nvlik" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="nav-link text-light nvlik" asp-area="" asp-controller="Home" asp-action="Index"><i class="fa fa-home"></i> Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="About">About Us</a>
+                            <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="About"><i class="fa fa-info-circle"></i> About Us</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-light" asp-area="" asp-controller="AddDonation" asp-action="newDonation">Donate to us</a>
+                            <a class="nav-link text-light" asp-area="" asp-controller="AddDonation" asp-action="newDonation"><i class="fa fa-gift"></i> Donate to us</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-light" asp-area="" asp-controller="Registration" asp-action="Register">Register</a>
+                            <a class="nav-link text-light" asp-area="" asp-controller="Registration" asp-action="Register"><i class="fa fa-user-plus"></i> Register</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Partners"><i class="fa fa-handshake-o"></i> Our Partners </a>
                         </li>
                     </ul>
                 </div>
