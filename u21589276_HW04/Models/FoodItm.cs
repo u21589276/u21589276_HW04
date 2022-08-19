@@ -9,6 +9,6 @@ namespace u21589276_HW04.Models
     public class FoodItm : DonorItems
     {
         [Display(Name = "Weight in KGs")]
-        public decimal Weight { get; set; }
+        public double Weight { get; set; }
     }
 }

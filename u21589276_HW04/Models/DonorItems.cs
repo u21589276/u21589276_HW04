@@ -7,7 +7,7 @@ namespace u21589276_HW04.Models
 {
     public class DonorItems
     {
-        public String Name { get; set; }
+        public string Name { get; set; }
         public string Description { get; set; }
     }
 }
