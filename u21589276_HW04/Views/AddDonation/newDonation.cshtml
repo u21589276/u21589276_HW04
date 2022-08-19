@@ -14,18 +14,37 @@
         <table class="table bg-warning">
             <tr>
                 <th>ITEM NAME</th>
-                <th>Description</th>
+                <th>Descr.</th>
+                <th>Category</th>
             </tr>
-        @foreach(var item in Model)
-        {
-        <tr>
-            @if (item.GetType() == typeof(ClothingItm))
-            {
-                <td>@item.Name</td>
-                <td>@item.Description</td>
+            @{
+                var cat1 = "";
+                var cat2 = "";
+                foreach (var item in Model) {
+                    if (item.GetType() == typeof(FoodItm))
+                    {
+                        cat1 = Convert.ToString(item.GetType());
+                        cat1 = cat1.Replace("u21589276_HW04.Models.", " ");
+                    }
+                    if (item.GetType() == typeof(ClothingItm))
+                    {
+                        cat2 = Convert.ToString(item.GetType());
+                        cat2 = cat2.Replace("u21589276_HW04.Models.", " ");
+                    }
+                }
             }
-        </tr>
-        }
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    @if (item.GetType() == typeof(FoodItm))
+                    {
+                        <td>@item.Name</td>
+                        <td>@item.Description</td>
+                        <td>@cat1</td>
+                    }
+                </tr>
+            }
         </table>
     </div>
 
@@ -36,18 +55,20 @@
         <table class="table bg-warning">
             <tr>
                 <th>ITEM NAME</th>
-                <th>CATEGORY</th>
+                <th>Descr.</th>
+                <th>Category</th>
             </tr>
-        @foreach (var item in Model)
-        {
-            <tr>
-                @if (item.GetType() == typeof(FoodItm))
-                {
-                    <td>@item.Name</td>
-                    <td>@item.Description</td>
-                }
-            </tr>
-        }
+            @foreach (var item in Model)
+            {
+                <tr>
+                    @if (item.GetType() == typeof(ClothingItm))
+                    {
+                        <td>@item.Name</td>
+                        <td>@item.Description</td>
+                        <td>@cat2</td>
+                    }
+                </tr>
+            }
         </table>
     </div>
 </div>

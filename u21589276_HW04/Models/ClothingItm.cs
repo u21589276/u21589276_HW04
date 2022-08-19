@@ -10,5 +10,6 @@ namespace u21589276_HW04.Models
         public string Size { get; set; }
         public string Color { get; set; }
         public string Material { get; set; }
+
     }
 }
