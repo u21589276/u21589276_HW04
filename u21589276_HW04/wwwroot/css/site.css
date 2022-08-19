@@ -95,6 +95,11 @@ h4{
     color: #ffa800;
 }
 
-.nvlik:hover{
+.nav-link:hover{
     color: #ffa800;
+}
+
+.clDigram {
+    background-color: white;
+    padding: 10px;
 }

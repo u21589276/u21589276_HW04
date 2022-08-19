@@ -5,9 +5,9 @@ using System.Threading.Tasks;
 
 namespace u21589276_HW04.Models
 {
-    public class Organisation : Donor
+    public class DonorItems
     {
-        public string OrganisationName { get; set; }
-        public int RegistrationNum { get; set; }
+        public String Name { get; set; }
+        public string Description { get; set; }
     }
 }

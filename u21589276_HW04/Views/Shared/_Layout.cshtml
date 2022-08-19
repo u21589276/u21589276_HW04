@@ -9,7 +9,7 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark text-light box-shadow mb-3">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark fixed-top text-light box-shadow mb-3">
             <div class="container-lg">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index"></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
@@ -35,7 +35,7 @@
             </div>
         </nav>
     </header>
-    <div class="container text-light">
+    <div class="container text-light" style="padding-top: 100px">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
