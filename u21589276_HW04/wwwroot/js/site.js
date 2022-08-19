@@ -19,9 +19,16 @@ function checkCategoryType() {
     if (selectedCategory == "Food") {
         Clothingfrmcontrol.style.display = "none";
         Foodfrmcontrol.style.display = "block";
+        document.getElementById("additembtn").style.display = "block";
     }
     else if (selectedCategory == "Clothing") {
         Clothingfrmcontrol.style.display = "block";
         Foodfrmcontrol.style.display = "none";
+        document.getElementById("additembtn").style.display = "block";
+    }
+    else {
+        Clothingfrmcontrol.style.display = "none";
+        Foodfrmcontrol.style.display = "none";
+        document.getElementById("additembtn").style.display = "none";
     }
 }
