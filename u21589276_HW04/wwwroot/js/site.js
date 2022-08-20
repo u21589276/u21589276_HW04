@@ -32,3 +32,8 @@ function checkCategoryType() {
         document.getElementById("additembtn").style.display = "none";
     }
 }
+
+function caceledop() {
+    document.getElementById("frmDonor").reset();
+    checkCategoryType();
+}
