@@ -10,9 +10,5 @@ namespace u21589276_HW04.Models
         public string Name { get; set; }
         public string Description { get; set; }
 
-        public DonorItems()
-        {
-
-        }
     }
 }
