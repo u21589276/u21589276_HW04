@@ -20,8 +20,58 @@ namespace u21589276_HW04.Data
                     Name = "T-shirts",
                     Description = "T-shirt. Good or excellent condition",
                     Size = "Small - 2XL",
-                    Color = "White",
+                    Color = "Any",
                     Material = "100% Cotton"
+                }
+            );
+            DonationItems.Add(
+                new ClothingItm
+                {
+                    Name = "Shirts",
+                    Description = "Shirt. Good or excellent condition",
+                    Size = "Small - 2XL",
+                    Color = "Any",
+                    Material = "100% Cotton or Polyester"
+                }
+            );
+            DonationItems.Add(
+                new ClothingItm
+                {
+                    Name = "Golf T-Shirts",
+                    Description = "Golfer T-Shirt. Good or excellent condition",
+                    Size = "Small - 2XL",
+                    Color = "Any",
+                    Material = "100% Cotton or Polyester"
+                }
+            );
+            DonationItems.Add(
+                new ClothingItm
+                {
+                    Name = "Jeans",
+                    Description = "For ladies and Men. Good or excellent condition",
+                    Size = "30 - 45",
+                    Color = "Any",
+                    Material = "cotton"
+                }
+            );
+            DonationItems.Add(
+                new ClothingItm
+                {
+                    Name = "Pants",
+                    Description = "Pants for Men & ladies. Good or excellent condition",
+                    Size = "UK2-13",
+                    Color = "Any",
+                    Material = "Cotton & Polyester"
+                }
+            );
+            DonationItems.Add(
+                new ClothingItm
+                {
+                    Name = "Tracksuits",
+                    Description = "Tracksuits for Men & ladies. Good or excellent condition",
+                    Size = "Small - 2XL",
+                    Color = "Any",
+                    Material = "100 Cotton or Polyester"
                 }
             );
             DonationItems.Add(
@@ -29,11 +79,31 @@ namespace u21589276_HW04.Data
                 {
                     Name = "Runnig Shoes",
                     Description = "Tekkies Good or excellent condition",
-                    Size = "Small - 2XL",
+                    Size = "UK2-13",
                     Color = "Any",
-                    Material = "Cotton & Polyester "
+                    Material = "Cotton & Polyester"
                 }
             );
+            DonationItems.Add(
+               new ClothingItm
+               {
+                   Name = "Sandals ",
+                   Description = "Sandals for ladies and Men. Good or excellent condition",
+                   Size = "Small - 2XL",
+                   Color = "Any",
+                   Material = "Any"
+               }
+           );
+            DonationItems.Add(
+               new ClothingItm
+               {
+                   Name = "Slops ",
+                   Description = "Slops for ladies and Men. Good or excellent condition",
+                   Size = "UK2-13",
+                   Color = "Any",
+                   Material = "Any"
+               }
+           );
 
             // all Food items accepted by The Giving Legends
             DonationItems.Add(
@@ -87,7 +157,7 @@ namespace u21589276_HW04.Data
             DonationItems.Add(
                  new FoodItm
                  {
-                     Name = "Magarne",
+                     Name = "Magarine",
                      Description = "Any type of margarine",
                      Weight = 0.5
                  }
@@ -100,7 +170,14 @@ namespace u21589276_HW04.Data
                      Weight = 0.500
                  }
             );
-
+            DonationItems.Add(
+                new FoodItm
+                {
+                    Name = "Maize Meal",
+                    Description = "Any type of Maize Meal",
+                    Weight = 5
+                }
+           );
             return DonationItems;
         }
 
