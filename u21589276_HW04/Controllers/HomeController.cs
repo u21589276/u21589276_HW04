@@ -16,7 +16,8 @@ namespace u21589276_HW04.Controllers
         public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
-            allPartners.Add(new Organisation {Name = "Jay Holdings (pty) ltd", RegistrationNum = "2015/05474/475"});
+            allPartners.Add(new Organisation {Name = "Jay Holdings (pty) ltd", RegistrationNum = "2015/05474/475", Phonenumber = "021 5584 2121"});
+            allPartners.Add(new Individual { Name = "Mila Mbopha", Age = 21, Phonenumber = "063 5466 304" });
         }
 
         public IActionResult Index()

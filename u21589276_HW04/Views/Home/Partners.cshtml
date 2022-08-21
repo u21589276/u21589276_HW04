@@ -5,36 +5,67 @@
 
 <h1 class="display-4 goldenclr">@ViewData["Title"]</h1>
 <p>This is a list of all the organisations who have partnered with us in seeing through with our Mission and Vision</p>
-<hr/>
+<hr />
+@{
+    var PartnerCate = "";
+    var PartnerCate2 = "";
+    foreach (var item in Model)
+    {
+        if (item.GetType() == typeof(Organisation))
+        {
+            PartnerCate = Convert.ToString(item.GetType());
+            PartnerCate = PartnerCate.Replace("u21589276_HW04.Models.", " ");
+        }
+        if (item.GetType() == typeof(Individual))
+        {
+            PartnerCate2 = Convert.ToString(item.GetType());
+            PartnerCate2 = PartnerCate2.Replace("u21589276_HW04.Models.", " ");
+        }
+    }
+}
 
-<table class="table bg-warning">
-    <tr>
+<!--table organisations-->
+<table class="table" name="Organisations">
+    <thead class="bg-warning">
         <th>Partner Name</th>
         <th>Details</th>
         <th>Partner ID</th>
-    </tr>
-    @{
-        var PartnerCate = "";
-        foreach (var item in Model)
+    </thead>
+    <tbody>
+        @foreach (var partner in Model)
         {
-            if (item.GetType() == typeof(Organisation))
+            @if (partner.GetType() == typeof(Organisation))
             {
-                PartnerCate = Convert.ToString(item.GetType());
-                PartnerCate = PartnerCate.Replace("u21589276_HW04.Models.", " ");
-            }
-            if (item.GetType() == typeof(Individual))
-            {
-                PartnerCate = Convert.ToString(item.GetType());
-                PartnerCate = PartnerCate.Replace("u21589276_HW04.Models.", " ");
+                <tr>
+                    <td>@partner.Name</td>
+                    <td>This is an @PartnerCate.</td>
+                    <td>@partner.Phonenumber</td>
+                    <td>@partner.getDonorID()</td>
+                </tr>
             }
         }
-    }
-    @foreach (var partner in Model)
-    {
-        <tr>
-            <td>@partner.Name</td>
-            <td>This is an @PartnerCate.</td>
-            <td>@partner.getDonorID()</td>
-        </tr>
-    }
+    </tbody>
+</table>
+
+<!--table individual-->
+<table class="table" name="Individauls">
+    <thead class="bg-warning">
+        <th>Partner Name</th>
+        <th>Details</th>
+        <th>Partner ID</th>
+    </thead>
+    <tbody>
+        @foreach (var partner in Model)
+        {
+            @if (partner.GetType() == typeof(Individual))
+            {
+            <tr>
+                <td>@partner.Name</td>
+                <td>This is an @PartnerCate2.</td>
+                <td>@partner.Phonenumber</td>
+                <td>@partner.getDonorID()</td>
+            </tr>
+            }
+        }
+    </tbody>
 </table>
