@@ -5,23 +5,32 @@
 
 <h1 class="display-4 goldenclr">@ViewData["Title"]</h1>
 <p>This is a list of all the organisations who have partnered with us in seeing through with our Mission and Vision</p>
-<hr color="#ffa800"/>
+<hr color="#ffa800" />
 
 <center><i class="fa fa-handshake-o goldenclr" style="font-size: xx-large;"></i></center>
 @{
     var PartnerCate = "";
     var PartnerCate2 = "";
+    var specialCategory = "";
     foreach (var item in Model)
     {
         if (item.GetType() == typeof(Organisation))
         {
             PartnerCate = Convert.ToString(item.GetType());
             PartnerCate = PartnerCate.Replace("u21589276_HW04.Models.", " ");
+
+            specialCategory = Convert.ToString(item.GetType());
+            specialCategory = specialCategory.Replace("u21589276_HW04.Models.", " ");
+
         }
         if (item.GetType() == typeof(Individual))
         {
             PartnerCate2 = Convert.ToString(item.GetType());
             PartnerCate2 = PartnerCate2.Replace("u21589276_HW04.Models.", " ");
+
+            specialCategory = Convert.ToString(item.GetType());
+            specialCategory = specialCategory.Replace("u21589276_HW04.Models.", " ");
+
         }
     }
 }
@@ -31,10 +40,13 @@
 <p>This table shows all organisations we have partnered with</p>
 <table class="table" name="Organisations">
     <thead class="bg-warning">
-    <th>Partner Name</th>
-    <th>Details</th>
-    <th>Phonenumber</th>
-    <th>Partner ID</th>
+        <tr>
+            <th>Partner Name</th>
+            <th>Details</th>
+            <th>Phonenumber</th>
+            <th>Partner ID</th>
+            <th>Age</th>
+        </tr>
     </thead>
     <tbody class="bg-light">
         @foreach (var partner in Model)
@@ -46,6 +58,7 @@
                     <td>This is an @PartnerCate.</td>
                     <td>@partner.Phonenumber</td>
                     <td>@partner.getDonorID()</td>
+                    <td>@partner.getAge()</td>
                 </tr>
             }
         }
@@ -63,6 +76,7 @@
             <th>Details</th>
             <th>Phonenumber</th>
             <th>Partner ID</th>
+            <th>Duration of Partnership</th>
         </tr>
     </thead>
     <tbody class="bg-light">
@@ -75,6 +89,7 @@
                     <td>This is an @PartnerCate2.</td>
                     <td>@partner.Phonenumber</td>
                     <td>@partner.getDonorID()</td>
+                    <td>sensitive</td>
                 </tr>
             }
         }

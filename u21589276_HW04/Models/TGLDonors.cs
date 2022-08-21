@@ -20,5 +20,10 @@ namespace u21589276_HW04.Models
         {
             return Name.Substring(0, 3) + "TGL22";
         }
+
+        public virtual int getAge()
+        {
+            return getAge();
+        }
     }
 }

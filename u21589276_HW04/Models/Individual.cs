@@ -19,5 +19,11 @@ namespace u21589276_HW04.Models
             return "Sensitive";
         }
 
+        public override int getAge()
+        {
+            //in the case of individual age means howlong they have been with us
+            return Age;
+        }
+
     }
 }
