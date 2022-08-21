@@ -25,13 +25,16 @@
 }
 
 <!--table organisations-->
+<h4>Organisationss</h4>
+<p>This table shows all organisations we have partnered with</p>
 <table class="table" name="Organisations">
     <thead class="bg-warning">
-        <th>Partner Name</th>
-        <th>Details</th>
-        <th>Partner ID</th>
+    <th>Partner Name</th>
+    <th>Details</th>
+    <th>Phonenumber</th>
+    <th>Partner ID</th>
     </thead>
-    <tbody>
+    <tbody class="bg-light">
         @foreach (var partner in Model)
         {
             @if (partner.GetType() == typeof(Organisation))
@@ -47,24 +50,28 @@
     </tbody>
 </table>
 
+<br />
 <!--table individual-->
+<h4>Individauls</h4>
+<p>This table shows all individuals we have partnered with</p>
 <table class="table" name="Individauls">
     <thead class="bg-warning">
-        <th>Partner Name</th>
-        <th>Details</th>
-        <th>Partner ID</th>
+    <th>Partner Name</th>
+    <th>Details</th>
+    <th>Phonenumber</th>
+    <th>Partner ID</th>
     </thead>
-    <tbody>
+    <tbody class="bg-light">
         @foreach (var partner in Model)
         {
             @if (partner.GetType() == typeof(Individual))
             {
-            <tr>
-                <td>@partner.Name</td>
-                <td>This is an @PartnerCate2.</td>
-                <td>@partner.Phonenumber</td>
-                <td>@partner.getDonorID()</td>
-            </tr>
+                <tr>
+                    <td>@partner.Name</td>
+                    <td>This is an @PartnerCate2.</td>
+                    <td>@partner.Phonenumber</td>
+                    <td>@partner.getDonorID()</td>
+                </tr>
             }
         }
     </tbody>
