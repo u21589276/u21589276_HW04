@@ -30,3 +30,20 @@ function checkUserType() {
 function displayDonorfrm() {
     document.getElementById("frmDonor").style.display = "block";
 }
+
+
+function submitDonation() {
+    var divloader = document.getElementById("loaderDiv");
+    var frm = document.getElementById("frmDonor");
+
+    frm.style.display = "none";
+    frm.reset();
+    divloader.style.display = "block";
+
+    const tmMessage = setTimeout(message, 5000);
+    function message() {
+        divloader.style.display = "none";
+        document.getElementById("messageEr").innerHTML = "Donation Submitted, you will recieve a confirmation message shortly!"
+    }
+}
+

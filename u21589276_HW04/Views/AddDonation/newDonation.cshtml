@@ -159,9 +159,13 @@
         <p>Please describe your item to us, invlude its weight in KG. for items under 1 kg write it as a decimal (e.g 0.500)</p>
         <input type="text" class="form-control" name="Item" id="itemInputdnr" placeholder="Describe Item...">
     </div>
-    <button type="button" class="btn btn-primary">Create Donation</button> &nbsp;&nbsp;
+    <button type="button" class="btn btn-primary" onclick="submitDonation()">Create Donation</button> &nbsp;&nbsp;
     <button type="button" class="btn btn-danger" onclick="caceledop()">Cancel</button>
 </form>
+<div id="loaderDiv">
+    <img src="~/Media/loader.gif" width="40%" />
+</div>
+<p id="messageEr" style="color:gold; font-size: large; font-weight:bold;"></p>
 
 <!--js scripts-->
 <script src="~/js/Registration.js"></script>
