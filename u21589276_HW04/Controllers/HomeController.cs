@@ -12,10 +12,11 @@ namespace u21589276_HW04.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-    
+        private List<TGLDonors> allPartners = new List<TGLDonors>();
         public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
+            allPartners.Add(new Organisation {Name = "Jay Holdings (pty) ltd", RegistrationNum = "2015/05474/475"});
         }
 
         public IActionResult Index()
@@ -29,7 +30,7 @@ namespace u21589276_HW04.Controllers
         }
         public IActionResult Partners()
         {
-            return View();
+            return View(allPartners);
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]

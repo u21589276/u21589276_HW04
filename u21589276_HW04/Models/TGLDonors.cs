@@ -16,7 +16,6 @@ namespace u21589276_HW04.Models
         {
            
         }
-
         public virtual string getDonorID()
         {
             return Name.Substring(0, 3) + "TGL22";

@@ -15,7 +15,6 @@ namespace u21589276_HW04.Controllers
         public IActionResult newDonation()
         {
             List<DonorItems> DonorAllItems = ItemsData.getDonorClothingItem();
-            //List<DonorItems> DonorFoodItems = ItemsData.getDonorFoodItem();
             return View(DonorAllItems);
         }
 

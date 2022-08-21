@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace u21589276_HW04.Models
 {
-    public class Individuals : TGLDonors
+    public class Individual : TGLDonors
     {
         public int Age { get; set; }
 

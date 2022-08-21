@@ -1,4 +1,5 @@
-﻿@{
+﻿@model List<TGLDonors>
+@{
     ViewData["Title"] = "Our Partners";
 }
 
@@ -10,5 +11,30 @@
     <tr>
         <th>Partner Name</th>
         <th>Details</th>
+        <th>Partner ID</th>
     </tr>
+    @{
+        var PartnerCate = "";
+        foreach (var item in Model)
+        {
+            if (item.GetType() == typeof(Organisation))
+            {
+                PartnerCate = Convert.ToString(item.GetType());
+                PartnerCate = PartnerCate.Replace("u21589276_HW04.Models.", " ");
+            }
+            if (item.GetType() == typeof(Individual))
+            {
+                PartnerCate = Convert.ToString(item.GetType());
+                PartnerCate = PartnerCate.Replace("u21589276_HW04.Models.", " ");
+            }
+        }
+    }
+    @foreach (var partner in Model)
+    {
+        <tr>
+            <td>@partner.Name</td>
+            <td>This is an @PartnerCate.</td>
+            <td>@partner.getDonorID()</td>
+        </tr>
+    }
 </table>

@@ -9,14 +9,13 @@ namespace u21589276_HW04.Models
     {
         public string RegistrationNum { get; set; }
 
-        public Organisation(string regNum)
-        {
-           RegistrationNum = regNum;
+        public Organisation()
+        {   
    
         }
         public override string getDonorID()
         {
-            return RegistrationNum.Substring(0,4) + "TGL22";
+            return RegistrationNum.Substring(3,8) + "TGL22";
         }
 
     }
