@@ -14,5 +14,10 @@ namespace u21589276_HW04.Models
             return Name.Substring(0, 8) + "TGL22";
         }
 
+        public string getAddress()
+        {
+            return "Sensitive";
+        }
+
     }
 }
