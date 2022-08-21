@@ -11,7 +11,7 @@ namespace u21589276_HW04.Models
 
         public override string getDonorID()
         {
-            return Name.Substring(0, 4) + "TGL22";
+            return Name.Substring(0, 8) + "TGL22";
         }
 
     }

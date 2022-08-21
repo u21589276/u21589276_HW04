@@ -6,18 +6,17 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using u21589276_HW04.Models;
+using u21589276_HW04.Data;
 
 namespace u21589276_HW04.Controllers
 {
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-        private List<TGLDonors> allPartners = new List<TGLDonors>();
         public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
-            allPartners.Add(new Organisation {Name = "Jay Holdings (pty) ltd", RegistrationNum = "2015/05474/475", Phonenumber = "021 5584 2121"});
-            allPartners.Add(new Individual { Name = "Mila Mbopha", Age = 21, Phonenumber = "063 5466 304" });
+           
         }
 
         public IActionResult Index()
@@ -31,6 +30,7 @@ namespace u21589276_HW04.Controllers
         }
         public IActionResult Partners()
         {
+            List<TGLDonors> allPartners = ourPartners.getAllPartners();
             return View(allPartners);
         }
 

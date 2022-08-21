@@ -11,12 +11,14 @@
 <div class="row">
     <div class="col-sm-6">
         <h4>Food Items</h4>
-        <table class="table bg-warning">
-            <tr>
-                <th>ITEM NAME</th>
-                <th>Descr.</th>
-                <th>Category</th>
-            </tr>
+        <table class="table">
+            <thead class="bg-warning">
+                <tr>
+                    <th>ITEM NAME</th>
+                    <th>Descr.</th>
+                    <th>Category</th>
+                </tr>
+            </thead>
             @{
                 var cat1 = "";
                 var cat2 = "";
@@ -33,40 +35,45 @@
                     }
                 }
             }
-
-            @foreach (var item in Model)
-            {
-                <tr>
-                    @if (item.GetType() == typeof(FoodItm))
-                    {
-                        <td>@item.Name</td>
-                        <td>@item.Description</td>
-                        <td>@cat1</td>
-                    }
-                </tr>
-            }
+            <tbody class="bg-light">
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        @if (item.GetType() == typeof(FoodItm))
+                        {
+                            <td>@item.Name</td>
+                            <td>@item.Description</td>
+                            <td>@cat1</td>
+                        }
+                    </tr>
+                }
+            </tbody>
         </table>
     </div>
 
     <div class="col-sm-6">
         <h4>Clothing Items</h4>
-        <table class="table bg-warning">
-            <tr>
-                <th>ITEM NAME</th>
-                <th>Descr.</th>
-                <th>Category</th>
-            </tr>
-            @foreach (var item in Model)
-            {
+        <table class="table">
+            <thead class="bg-warning">
                 <tr>
-                    @if (item.GetType() == typeof(ClothingItm))
-                    {
-                        <td>@item.Name</td>
-                        <td>@item.Description</td>
-                        <td>@cat2</td>
-                    }
+                    <th>ITEM NAME</th>
+                    <th>Descr.</th>
+                    <th>Category</th>
                 </tr>
-            }
+            </thead>
+            <tbody class="bg-light">
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        @if (item.GetType() == typeof(ClothingItm))
+                        {
+                            <td>@item.Name</td>
+                            <td>@item.Description</td>
+                            <td>@cat2</td>
+                        }
+                    </tr>
+                }
+            </tbody>
         </table>
     </div>
 </div>
@@ -149,6 +156,7 @@
 
     <div class="form-group">
         <label for="itemInputdnr">Item Description</label>
+        <p>Please describe your item to us, invlude its weight in KG. for items under 1 kg write it as a decimal (e.g 0.500)</p>
         <input type="text" class="form-control" name="Item" id="itemInputdnr" placeholder="Describe Item...">
     </div>
     <button type="button" class="btn btn-primary">Create Donation</button> &nbsp;&nbsp;

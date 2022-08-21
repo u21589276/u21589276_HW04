@@ -7,7 +7,7 @@
 <p>This is a list of all the organisations who have partnered with us in seeing through with our Mission and Vision</p>
 <hr color="#ffa800"/>
 
-<center><i class="fa fa-handshake-o goldenclr"></i></center>
+<center><i class="fa fa-handshake-o goldenclr" style="font-size: xx-large;"></i></center>
 @{
     var PartnerCate = "";
     var PartnerCate2 = "";
@@ -27,7 +27,7 @@
 }
 
 <!--table organisations-->
-<h4>Organisationss</h4>
+<h4>Organisations</h4>
 <p>This table shows all organisations we have partnered with</p>
 <table class="table" name="Organisations">
     <thead class="bg-warning">
@@ -58,10 +58,12 @@
 <p>This table shows all individuals we have partnered with</p>
 <table class="table" name="Individauls">
     <thead class="bg-warning">
-    <th>Partner Name</th>
-    <th>Details</th>
-    <th>Phonenumber</th>
-    <th>Partner ID</th>
+        <tr>
+            <th>Partner Name</th>
+            <th>Details</th>
+            <th>Phonenumber</th>
+            <th>Partner ID</th>
+        </tr>
     </thead>
     <tbody class="bg-light">
         @foreach (var partner in Model)

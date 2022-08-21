@@ -11,8 +11,7 @@ namespace u21589276_HW04.Data
         public static List<DonorItems> getDonorClothingItem()
         {
             List<DonorItems> DonationItems = new List<DonorItems>();
-            List<ClothingItm> clothingItems = new List<ClothingItm>();
-
+      
             // all clothing items accepted by The Giving Legends
             DonationItems.Add(
                 new ClothingItm
@@ -110,7 +109,7 @@ namespace u21589276_HW04.Data
                new FoodItm
                {
                    Name = "Flour",
-                   Description = "All types of flour",
+                   Description = "All types of flour.",
                    Weight = 2
                }
             );
@@ -118,7 +117,7 @@ namespace u21589276_HW04.Data
                new FoodItm
                {
                    Name = "sugar",
-                   Description = "White or Brown sugar",
+                   Description = "White or Brown sugar.",
                    Weight = 0.400
                }
            );
@@ -126,7 +125,7 @@ namespace u21589276_HW04.Data
                new FoodItm
                {
                    Name = "Rice",
-                   Description = "Any type of rice",
+                   Description = "Any type of rice.",
                    Weight = 2
                }
             );
@@ -134,7 +133,7 @@ namespace u21589276_HW04.Data
                  new FoodItm
                  {
                      Name = "Sphagetti / Macaroni",
-                     Description = "Any type of sphagetti or macaroni",
+                     Description = "Any type of sphagetti, macaroni or pasta.",
                      Weight = 0.500
                  }
             );
@@ -142,7 +141,7 @@ namespace u21589276_HW04.Data
                new FoodItm
                {
                    Name = "Beans",
-                   Description = "Any type of Canned beans",
+                   Description = "Any type of Canned beans.",
                    Weight = 0.410
                }
             );
@@ -150,7 +149,7 @@ namespace u21589276_HW04.Data
                 new FoodItm
                 {
                     Name = "Bread",
-                    Description = "White or Brown bread",
+                    Description = "White or Brown bread.",
                     Weight = 0.400
                 }   
             );
@@ -158,7 +157,7 @@ namespace u21589276_HW04.Data
                  new FoodItm
                  {
                      Name = "Magarine",
-                     Description = "Any type of margarine",
+                     Description = "Any type of margarine.",
                      Weight = 0.5
                  }
             );
@@ -166,7 +165,7 @@ namespace u21589276_HW04.Data
                  new FoodItm
                  {
                      Name = "Butter",
-                     Description = "Any type of Butter",
+                     Description = "Any type of Butter.",
                      Weight = 0.500
                  }
             );
@@ -174,9 +173,25 @@ namespace u21589276_HW04.Data
                 new FoodItm
                 {
                     Name = "Maize Meal",
-                    Description = "Any type of Maize Meal",
+                    Description = "Any type of Maize Meal.",
                     Weight = 5
                 }
+           );
+            DonationItems.Add(
+              new FoodItm
+              {
+                  Name = "Organic Garden Vegetables",
+                  Description = "Any type of vegetables.",
+                  Weight = 10
+              }
+           );
+            DonationItems.Add(
+              new FoodItm
+              {
+                  Name = "Canned Food",
+                  Description = "Any type of Canned Food for human consumption.",
+                  Weight = 0.500
+              }
            );
             return DonationItems;
         }
